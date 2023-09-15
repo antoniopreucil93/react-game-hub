@@ -1,7 +1,7 @@
 import { Button, ButtonGroup, Grid, GridItem, Show } from '@chakra-ui/react';
 import NavBar from './components/NavBar';
 import GameGrid from './components/GameGrid';
-import GenerList from './components/GenerList';
+import GenerList from './components/GenreList';
 
 function App() {
 	return (
