@@ -1,6 +1,7 @@
 import {
 	Button,
 	HStack,
+	Heading,
 	Image,
 	List,
 	ListItem,
@@ -24,6 +25,9 @@ function GenerList({ selectedGenre, onSelectGenre }: Props) {
 
 	return (
 		<>
+			<Heading fontSize="2xl" marginBottom="3">
+				Genres
+			</Heading>
 			<List>
 				{genres.map(genre => (
 					<ListItem key={genre.id} paddingY="5px">
@@ -31,9 +35,12 @@ function GenerList({ selectedGenre, onSelectGenre }: Props) {
 							<Image
 								boxSize="32px"
 								borderRadius={8}
+								objectFit="cover"
 								src={getCroppedImageUrl(genre.image_background)}
 							/>
 							<Button
+								whiteSpace="normal"
+								textAlign="left"
 								fontWeight={
 									genre.id === selectedGenre?.id
 										? 'bold'
